@@ -11,6 +11,7 @@
 		CD67DDF52C55E4EA00ABAB83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67DDF42C55E4EA00ABAB83 /* ContentView.swift */; };
 		CD67DDF72C55E4EC00ABAB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD67DDF62C55E4EC00ABAB83 /* Assets.xcassets */; };
 		CD67DDFA2C55E4EC00ABAB83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD67DDF92C55E4EC00ABAB83 /* Preview Assets.xcassets */; };
+		CD67DE082C55E65D00ABAB83 /* CoinsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67DE072C55E65D00ABAB83 /* CoinsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CD67DDF42C55E4EA00ABAB83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CD67DDF62C55E4EC00ABAB83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD67DDF92C55E4EC00ABAB83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD67DE072C55E65D00ABAB83 /* CoinsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,8 @@
 		CD67DDF12C55E4EA00ABAB83 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CD67DDF22C55E4EA00ABAB83 /* NetworkingApp.swift */,
-				CD67DDF42C55E4EA00ABAB83 /* ContentView.swift */,
+				CD67DE002C55E4F700ABAB83 /* App */,
+				CD67DE012C55E4FA00ABAB83 /* Core */,
 				CD67DDF62C55E4EC00ABAB83 /* Assets.xcassets */,
 				CD67DDF82C55E4EC00ABAB83 /* Preview Content */,
 			);
@@ -65,6 +67,55 @@
 				CD67DDF92C55E4EC00ABAB83 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD67DE002C55E4F700ABAB83 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CD67DDF22C55E4EA00ABAB83 /* NetworkingApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CD67DE012C55E4FA00ABAB83 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CD67DE022C55E4FC00ABAB83 /* AllCoins */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CD67DE022C55E4FC00ABAB83 /* AllCoins */ = {
+			isa = PBXGroup;
+			children = (
+				CD67DE052C55E50700ABAB83 /* ViewModel */,
+				CD67DE042C55E50500ABAB83 /* View */,
+				CD67DE032C55E50200ABAB83 /* Model */,
+			);
+			path = AllCoins;
+			sourceTree = "<group>";
+		};
+		CD67DE032C55E50200ABAB83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD67DE042C55E50500ABAB83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD67DDF42C55E4EA00ABAB83 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD67DE052C55E50700ABAB83 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD67DE072C55E65D00ABAB83 /* CoinsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD67DDF52C55E4EA00ABAB83 /* ContentView.swift in Sources */,
+				CD67DE082C55E65D00ABAB83 /* CoinsViewModel.swift in Sources */,
 				CD67DDF32C55E4EA00ABAB83 /* NetworkingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
