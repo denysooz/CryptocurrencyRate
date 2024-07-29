@@ -11,7 +11,11 @@ struct ContentView: View {
     @StateObject var viewModel = CoinsViewModel()
     var body: some View {
         VStack {
-            Text("\(viewModel.coin): \(viewModel.price)")
+            if let errorMesage = viewModel.errorMessage {
+                Text(errorMesage)
+            } else {
+                Text("\(viewModel.coin): \(viewModel.price)")
+            }
         }
         .padding()
     }
