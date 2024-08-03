@@ -16,6 +16,7 @@ class CoinDetailsViewModel: ObservableObject {
     
     
     init(coinId: String) {
+        print("DEBUG: Init")
         self.coinId = coinId
         
         Task { await fetchCoinDetails() }

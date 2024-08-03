@@ -17,24 +17,32 @@ struct CoinDetailsView: View {
     }
     
     var body: some View {
-        if let details = viewModel.coinDetails {
-            VStack(alignment: .leading) {
+        VStack(alignment: .leading) {
+            if let details = viewModel.coinDetails {
                 Text(details.name)
                     .fontWeight(.semibold)
                     .font(.subheadline)
-                        
+                
                 Text(details.symbol.uppercased())
                     .font(.footnote)
-                  
+                
                 
                 Text(details.description.text)
                     .font(.footnote)
                     .padding(.vertical)
-                    
+                
             }
-            .padding()
         }
-        
+        .task {
+            await viewModel.fetchCoinDetails()
+        }
+//        .onAppear {
+//            self.task = Task { await viewModel.fetchCoinDetails() }
+//        }
+//        .onDisappear() {
+//            task?.cancel()
+//        }
+        .padding()
     }
 }
 
