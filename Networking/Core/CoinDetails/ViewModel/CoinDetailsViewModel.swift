@@ -9,17 +9,14 @@ import Foundation
 
 class CoinDetailsViewModel: ObservableObject {
     
-    private let serivce = CoinDataService()
+    private let serivce: CoinDataService
     private let coinId: String
     
     @Published var coinDetails: CoinDetails?
     
-    
-    init(coinId: String) {
-        print("DEBUG: Init")
+    init(coinId: String, service: CoinDataService) {
+        self.serivce = service
         self.coinId = coinId
-        
-//        Task { await fetchCoinDetails() }
     }
     
     @MainActor

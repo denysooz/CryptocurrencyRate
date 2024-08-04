@@ -9,6 +9,10 @@ import Foundation
 
 class CoinDataService: HTTPDataDownloader {
     
+    init() {
+        print("DEBUG: Did init service...")
+    }
+    
     func fetchCoins() async throws -> [Coin] {
         guard let endpoint = allCoinsURLString else {
             throw CoinAPIError.requestFailed(description: "Invalid endpoint")
