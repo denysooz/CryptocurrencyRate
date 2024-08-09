@@ -21,7 +21,18 @@
 		CD9D9C2B2C5DD5380083ED01 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D9C2A2C5DD5380083ED01 /* HTTPDataDownloader.swift */; };
 		CD9D9C2E2C5F04960083ED01 /* CoinDetailsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D9C2D2C5F04960083ED01 /* CoinDetailsCache.swift */; };
 		CD9D9C302C6075930083ED01 /* MockCoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9D9C2F2C6075930083ED01 /* MockCoinService.swift */; };
+		CDF4141A2C65BB91009D9779 /* CoinsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF414192C65BB91009D9779 /* CoinsViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDF414102C65B682009D9779 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD67DDE72C55E4EA00ABAB83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD67DDEE2C55E4EA00ABAB83;
+			remoteInfo = Networking;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CD67DDEF2C55E4EA00ABAB83 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,10 +50,19 @@
 		CD9D9C2A2C5DD5380083ED01 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 		CD9D9C2D2C5F04960083ED01 /* CoinDetailsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailsCache.swift; sourceTree = "<group>"; };
 		CD9D9C2F2C6075930083ED01 /* MockCoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoinService.swift; sourceTree = "<group>"; };
+		CDF4140C2C65B682009D9779 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF414192C65BB91009D9779 /* CoinsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CD67DDEC2C55E4EA00ABAB83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF414092C65B682009D9779 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -56,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				CD67DDF12C55E4EA00ABAB83 /* Networking */,
+				CDF4140D2C65B682009D9779 /* NetworkingTests */,
 				CD67DDF02C55E4EA00ABAB83 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				CD67DDEF2C55E4EA00ABAB83 /* Networking.app */,
+				CDF4140C2C65B682009D9779 /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,6 +231,14 @@
 			path = Cache;
 			sourceTree = "<group>";
 		};
+		CDF4140D2C65B682009D9779 /* NetworkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDF414192C65BB91009D9779 /* CoinsViewModelTests.swift */,
+			);
+			path = NetworkingTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -229,6 +259,24 @@
 			productReference = CD67DDEF2C55E4EA00ABAB83 /* Networking.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CDF4140B2C65B682009D9779 /* NetworkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDF414142C65B682009D9779 /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildPhases = (
+				CDF414082C65B682009D9779 /* Sources */,
+				CDF414092C65B682009D9779 /* Frameworks */,
+				CDF4140A2C65B682009D9779 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDF414112C65B682009D9779 /* PBXTargetDependency */,
+			);
+			name = NetworkingTests;
+			productName = NetworkingTests;
+			productReference = CDF4140C2C65B682009D9779 /* NetworkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,6 +289,10 @@
 				TargetAttributes = {
 					CD67DDEE2C55E4EA00ABAB83 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					CDF4140B2C65B682009D9779 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = CD67DDEE2C55E4EA00ABAB83;
 					};
 				};
 			};
@@ -258,6 +310,7 @@
 			projectRoot = "";
 			targets = (
 				CD67DDEE2C55E4EA00ABAB83 /* Networking */,
+				CDF4140B2C65B682009D9779 /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +322,13 @@
 			files = (
 				CD67DDFA2C55E4EC00ABAB83 /* Preview Assets.xcassets in Resources */,
 				CD67DDF72C55E4EC00ABAB83 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDF4140A2C65B682009D9779 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +354,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CDF414082C65B682009D9779 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDF4141A2C65BB91009D9779 /* CoinsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDF414112C65B682009D9779 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD67DDEE2C55E4EA00ABAB83 /* Networking */;
+			targetProxy = CDF414102C65B682009D9779 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CD67DDFB2C55E4EC00ABAB83 /* Debug */ = {
@@ -474,6 +550,42 @@
 			};
 			name = Release;
 		};
+		CDF414122C65B682009D9779 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HN9GG893K9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.denysooz.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Networking";
+			};
+			name = Debug;
+		};
+		CDF414132C65B682009D9779 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HN9GG893K9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.denysooz.NetworkingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Networking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Networking";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,6 +603,15 @@
 			buildConfigurations = (
 				CD67DDFE2C55E4EC00ABAB83 /* Debug */,
 				CD67DDFF2C55E4EC00ABAB83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDF414142C65B682009D9779 /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDF414122C65B682009D9779 /* Debug */,
+				CDF414132C65B682009D9779 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

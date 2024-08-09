@@ -22,8 +22,9 @@ class CoinDataService: CoinSeviceProtocol, HTTPDataDownloader {
         guard let endpoint = allCoinsURLString else {
             throw CoinAPIError.requestFailed(description: "Invalid endpoint")
         }
-        
-        return try await fetchData(as: [Coin].self, endpoint: endpoint)
+        let det = try await fetchData(as: [Coin].self, endpoint: endpoint)
+        print(det)
+        return det
     }
     
     func fetchCoinDetails(id: String) async throws -> CoinDetails? {
