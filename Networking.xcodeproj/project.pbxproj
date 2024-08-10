@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD18F0772C670CF700332D59 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD18F0762C670CF700332D59 /* ImageLoader.swift */; };
+		CD18F0792C670D0400332D59 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD18F0782C670D0400332D59 /* ImageCache.swift */; };
+		CD18F07D2C670D2600332D59 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD18F07C2C670D2600332D59 /* CoinImageView.swift */; };
 		CD67DDF32C55E4EA00ABAB83 /* NetworkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67DDF22C55E4EA00ABAB83 /* NetworkingApp.swift */; };
 		CD67DDF52C55E4EA00ABAB83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67DDF42C55E4EA00ABAB83 /* ContentView.swift */; };
 		CD67DDF72C55E4EC00ABAB83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD67DDF62C55E4EC00ABAB83 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD18F0762C670CF700332D59 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		CD18F0782C670D0400332D59 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		CD18F07C2C670D2600332D59 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		CD67DDEF2C55E4EA00ABAB83 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD67DDF22C55E4EA00ABAB83 /* NetworkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingApp.swift; sourceTree = "<group>"; };
 		CD67DDF42C55E4EA00ABAB83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD18F0752C670CF100332D59 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				CD18F0762C670CF700332D59 /* ImageLoader.swift */,
+				CD18F0782C670D0400332D59 /* ImageCache.swift */,
+				CD18F07C2C670D2600332D59 /* CoinImageView.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		CD67DDE62C55E4EA00ABAB83 = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +226,7 @@
 		CD9D9C282C5DD52B0083ED01 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				CD18F0752C670CF100332D59 /* Image */,
 				CD9D9C292C5DD5310083ED01 /* API */,
 			);
 			path = Shared;
@@ -350,7 +367,10 @@
 				CD67DDF52C55E4EA00ABAB83 /* ContentView.swift in Sources */,
 				CD67DE082C55E65D00ABAB83 /* CoinsViewModel.swift in Sources */,
 				CD7711A82C5721DA00B7B4BA /* Coin.swift in Sources */,
+				CD18F07D2C670D2600332D59 /* CoinImageView.swift in Sources */,
 				CD67DDF32C55E4EA00ABAB83 /* NetworkingApp.swift in Sources */,
+				CD18F0792C670D0400332D59 /* ImageCache.swift in Sources */,
+				CD18F0772C670CF700332D59 /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

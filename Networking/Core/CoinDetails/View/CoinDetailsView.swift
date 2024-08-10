@@ -19,13 +19,22 @@ struct CoinDetailsView: View {
     var body: some View {
         VStack(alignment: .leading) {
             if let details = viewModel.coinDetails {
-                Text(details.name)
-                    .fontWeight(.semibold)
-                    .font(.subheadline)
-                
-                Text(details.symbol.uppercased())
-                    .font(.footnote)
-                
+                HStack {
+                    VStack {
+                        Text(details.name)
+                            .fontWeight(.semibold)
+                            .font(.subheadline)
+                        
+                        Text(details.symbol.uppercased())
+                            .font(.footnote)
+                        
+                    }
+                    
+                    Spacer()
+                    
+                    CoinImageView(url: coin.image)
+                        .frame(width: 64, height: 64)
+                }
                 
                 Text(details.description.text)
                     .font(.footnote)
