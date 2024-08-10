@@ -14,17 +14,18 @@ protocol CoinSeviceProtocol {
 
 class CoinDataService: CoinSeviceProtocol, HTTPDataDownloader {
     
-    init() {
-        print("DEBUG: Did init service...")
-    }
+    private var page = 0
+    private let fetchLimit = 30
+
     
     func fetchCoins() async throws -> [Coin] {
+        page += 1
+        
         guard let endpoint = allCoinsURLString else {
             throw CoinAPIError.requestFailed(description: "Invalid endpoint")
         }
-        let det = try await fetchData(as: [Coin].self, endpoint: endpoint)
-        print(det)
-        return det
+
+        return try await fetchData(as: [Coin].self, endpoint: endpoint)
     }
     
     func fetchCoinDetails(id: String) async throws -> CoinDetails? {
@@ -60,8 +61,8 @@ class CoinDataService: CoinSeviceProtocol, HTTPDataDownloader {
         components.queryItems = [
             .init(name: "vs_currency", value: "usd"),
             .init(name: "order", value: "market_cap_desc"),
-            .init(name: "per_page", value: "20"),
-            .init(name: "page", value: "1"),
+            .init(name: "per_page", value: "\(fetchLimit)"),
+            .init(name: "page", value: "\(page)"),
             .init(name: "price_change_percentage", value: "24h")
         ]
         
