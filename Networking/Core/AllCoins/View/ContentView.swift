@@ -33,6 +33,10 @@ struct ContentView: View {
                                 
                                 Text(coin.symbol.uppercased())
                             }
+                            
+                            Spacer()
+                            
+                            Text("\(String(format: "%.15g", coin.currentPrice))$")
                         }
                         .onAppear {
                             if coin == viewModel.coins.last {
